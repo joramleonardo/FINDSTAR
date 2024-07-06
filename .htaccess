@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond $1 !^(index\.php|indexcp\.php?|resources|robots\.txt)
+RewriteRule ^([A-Za-z0-9_/.-]+)$ index.php?/welcome/$1 
